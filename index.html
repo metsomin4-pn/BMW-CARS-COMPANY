@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Motors | Premium Cars</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>BMW</span> MOTORS
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="small-title">WELCOME TO BMW MOTORS</p>
+
+            <h1>THE ULTIMATE<br>
+                <span>DRIVING MACHINE</span>
+            </h1>
+
+            <p>
+                Discover premium BMW cars designed for performance,
+                luxury and unforgettable driving experiences.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#cars" class="btn primary-btn">Explore Cars</a>
+                <a href="#contact" class="btn secondary-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section id="cars" class="cars-section">
+
+        <div class="section-title">
+            <p>OUR COLLECTION</p>
+            <h2>Featured BMW Cars</h2>
+            <span>Choose your perfect BMW</span>
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search BMW model..."
+                onkeyup="searchCars()"
+            >
+        </div>
+
+        <div class="car-container">
+
+            <!-- BMW M3 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80"
+                        alt="BMW M3"
+                    >
+                    <span class="car-badge">M SERIES</span>
+                </div>
+
+                <div class="car-info">
+                    <h3>BMW M3</h3>
+                    <p class="car-type">M3 Competition</p>
+
+                    <div class="car-specs">
+                        <span>⚡ 503 HP</span>
+                        <span>⚙ Automatic</span>
+                        <span>🚗 3.0L</span>
+                    </div>
+
+                    <div class="price-row">
+                        <strong>$75,000</strong>
+                        <button onclick="showDetails('BMW M3')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMW M4 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80"
+                        alt="BMW M4"
+                    >
+                    <span class="car-badge">M SERIES</span>
+                </div>
+
+                <div class="car-info">
+                    <h3>BMW M4</h3>
+                    <p class="car-type">M4 Competition</p>
+
+                    <div class="car-specs">
+                        <span>⚡ 503 HP</span>
+                        <span>⚙ Automatic</span>
+                        <span>🚗 3.0L</span>
+                    </div>
+
+                    <div class="price-row">
+                        <strong>$80,000</strong>
+                        <button onclick="showDetails('BMW M4')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMW M5 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=1200&q=80"
+                        alt="BMW M5"
+                    >
+                    <span class="car-badge">M SERIES</span>
+                </div>
+
+                <div class="car-info">
+                    <h3>BMW M5</h3>
+                    <p class="car-type">M5 Competition</p>
+
+                    <div class="car-specs">
+                        <span>⚡ 617 HP</span>
+                        <span>⚙ Automatic</span>
+                        <span>🚗 4.4L</span>
+                    </div>
+
+                    <div class="price-row">
+                        <strong>$110,000</strong>
+                        <button onclick="showDetails('BMW M5')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMW M8 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80"
+                        alt="BMW M8"
+                    >
+                    <span class="car-badge">M SERIES</span>
+                </div>
+
+                <div class="car-info">
+                    <h3>BMW M8</h3>
+                    <p class="car-type">M8 Competition</p>
+
+                    <div class="car-specs">
+                        <span>⚡ 617 HP</span>
+                        <span>⚙ Automatic</span>
+                        <span>🚗 4.4L</span>
+                    </div>
+
+                    <div class="price-row">
+                        <strong>$140,000</strong>
+                        <button onclick="showDetails('BMW M8')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about-section">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
+                alt="BMW showroom"
+            >
+        </div>
+
+        <div class="about-content">
+            <p class="section-label">ABOUT US</p>
+
+            <h2>Experience BMW Excellence</h2>
+
+            <p>
+                BMW Motors is dedicated to providing premium BMW vehicles
+                for customers who value performance, luxury and innovation.
+            </p>
+
+            <p>
+                Our collection includes powerful M Series models such as
+                the BMW M3, M4, M5 and M8.
+            </p>
+
+            <div class="about-features">
+                <div>
+                    <strong>10+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+                <div>
+                    <strong>500+</strong>
+                    <span>Cars Sold</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Customer Care</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+        <div class="section-title">
+            <p>GET IN TOUCH</p>
+            <h2>Contact Us</h2>
+            <span>We are ready to help you find your BMW.</span>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Phnom Penh, Cambodia</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+855 12 345 678</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@bmwmotors.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <form id="contactForm" class="contact-form">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn primary-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Login -->
+    <section id="login" class="login-section">
+
+        <div class="login-box">
+
+            <div class="login-logo">
+                BMW
+            </div>
+
+            <h2>Welcome Back</h2>
+            <p>Login to BMW Motors</p>
+
+            <form id="loginForm">
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="register-text">
+                Don't have an account?
+                <a href="#">Create Account</a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>BMW MOTORS</h2>
+                <p>
+                    Premium cars. Powerful performance.
+                    Unforgettable experiences.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#cars">Cars</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div>
+                <h3>Follow Us</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>TikTok</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 BMW Motors. All Rights Reserved.
+        </div>
+
+    </footer>
+
+    <!-- Car Details Modal -->
+    <div id="carModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2 id="modalTitle">BMW M3</h2>
+
+            <p id="modalDescription">
+                Experience the power and performance of the BMW M3.
+            </p>
+
+            <div class="modal-details">
+                <p><strong>Engine:</strong> 3.0L Twin-Turbo</p>
+                <p><strong>Power:</strong> 503 HP</p>
+                <p><strong>Transmission:</strong> 8-Speed Automatic</p>
+                <p><strong>Drive:</strong> AWD</p>
+            </div>
+
+            <button
+                class="btn primary-btn"
+                onclick="buyCar()"
+            >
+                Buy Now
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="./JS/style.js"></script>
+
+</body>
+</html>
